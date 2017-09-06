@@ -62,6 +62,14 @@ public class Test {
         long count = list.stream().filter(integer -> integer.equals(3)).count();
         System.out.println(count);
 
+        System.out.println("找出list中某个值是3的内容并组成新的对象*************************");
+        //找出list中某个值是3的个数
+        list = list.stream().filter(integer -> integer.equals(3)).collect(Collectors.toList());
+
+        System.out.println("*************************");
+        //找出list中某个值是3的个数
+        Integer s= list.stream().filter(integer -> integer.equals(5)).findFirst().get();
+        System.out.println(s);
     }
 
     private static void testMap() {
